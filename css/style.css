@@ -1,0 +1,97 @@
+@import url(
+    'https://fonts.googleapis.com/css2?family=Karla:weight@400;500;600;700;800&display=swap'
+);
+
+html, body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    background-color: #ebf2f8;
+    font-family: 'Karla', sans-serif;
+}
+
+.tasks_list {
+    width: 300px;
+    height: 405px;
+    position: absolute;
+    top: 20%;
+    left: 0px;
+    right: 0px;
+    margin: 0px auto;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+label {
+    background-color: #040c3a;
+    height: 70px;
+    width: 100%;
+    display: block;
+    color: #ffffff;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+    text-transform: capitalize;
+    font-weight: 900;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-indent: 20px;
+    cursor: pointer;
+    transition: all 0.7s ease;
+    position: relative;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin: 10px 0;
+}
+
+label h2 span {
+    display: block;
+    font-size: 13px;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: #ff4a7b;
+    margin-top: 5px;
+}
+
+label:before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+    display: block;
+    position: absolute;
+    border-radius: 100%;
+    right: 20px;
+    top: 30%;
+    transition: border 0.7s ease;
+}
+
+#label_1:checked ~ label[for=label_1],
+#label_2:checked ~ label[for=label_2],
+#label_3:checked ~ label[for=label_3],
+#label_4:checked ~ label[for=label_4],
+#label_5:checked ~ label[for=label_5] {
+    background-color: #ff4a7b;
+    color: #ffffff;
+}
+
+#label_1:checked ~ label[for=label_1] h2 span,
+#label_2:checked ~ label[for=label_2] h2 span,
+#label_3:checked ~ label[for=label_3] h2 span,
+#label_4:checked ~ label[for=label_4] h2 span,
+#label_5:checked ~ label[for=label_5] h2 span {
+    color: #040c3a;
+}
+
+#label_1:checked ~ label[for=label_1]:before,
+#label_2:checked ~ label[for=label_2]:before,
+#label_3:checked ~ label[for=label_3]:before,
+#label_4:checked ~ label[for=label_4]:before,
+#label_5:checked ~ label[for=label_5]:before {
+    background: url('check.png') no-repeat center center;
+    background-size: cover;
+}
